@@ -1,0 +1,14 @@
+<h2>All albums by <%= @band.name %></h2>
+
+<ul>
+<% @albums.each do |album| %>
+    <% if album.band_id == @band.id %>
+    <li>
+    <%= album.title %>
+    </li>
+    <% end %>
+<% end %>
+
+</ul>
+
+<a href="<%= new_band_album_url %>">Create a new Album</a>

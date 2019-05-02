@@ -16,7 +16,6 @@ class SessionsController < ApplicationController
     end
 
     def destroy
-        debugger
         if current_user
             current_user.reset_session_token!
             session[:session_token] = nil

@@ -11,7 +11,7 @@
 
 class Album < ApplicationRecord
 
-    validates :title, :year, presence: true
+    validates :title, :yr, presence: true
 
     belongs_to :band,
         primary_key: :id,
