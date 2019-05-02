@@ -1,12 +1,8 @@
 class AlbumsController < ApplicationController
     
     def index
-        #@albums = Band.find_by(params[:id]).albums
-        #debugger
-        @albums = Album.all
-        #debugger
-        @band = Band.find_by(params[:id])
-        #debugger
+        @band = Band.find(params[:band_id])
+        @albums = @band.albums
         render :index
     end
 
